@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "242753961976",
+    "project_id": "liqo-cef62",
+    "storage_bucket": "liqo-cef62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242753961976:android:4bdfe03fed12d70f5ca00d",
+        "android_client_info": {
+          "package_name": "com.example.amc_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9F-rxn6MOpYN7S0omyXG7Z7QK066LWog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

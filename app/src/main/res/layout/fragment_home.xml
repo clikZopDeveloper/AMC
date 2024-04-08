@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    tools:context=".Fragment.HomeFragment">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/llTopSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="@color/yellow_color"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_5dip"
+                                android:fontFamily="@font/quicksand_bold"
+                                android:gravity="center"
+                                android:padding="@dimen/_6dp"
+                                android:text="Hello "
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5dip"
+                                android:layout_marginTop="@dimen/_10dp"
+                                android:layout_marginBottom="@dimen/_10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="140dp"
+                                    android:layout_marginHorizontal="@dimen/_5dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_round_shape_white"
+                                    android:backgroundTint="@color/purple_200"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_4dip">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/roboto_bold"
+                                        android:text="Day Status"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_16sp" />
+
+                                    <TextView
+                                        android:id="@+id/dayStartStatus"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/roboto_bold"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_14sp" />
+
+                                    <Switch
+                                        android:id="@+id/switchDayStart"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/_10dp"
+                                        android:layout_marginBottom="@dimen/_10dp"
+                                        android:layout_toLeftOf="@+id/ivLogout"
+                                        android:background="@drawable/bg_switch_shape"
+                                        android:backgroundTint="@color/vlight_color"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:thumb="@drawable/switch_bg"
+                                        android:thumbTextPadding="@dimen/_5dip" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="140dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginHorizontal="@dimen/_5dip"
+                                    android:layout_marginTop="@dimen/_2dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_round_shape_white"
+                                    android:backgroundTint="@color/purple_200"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_4dip">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/roboto_bold"
+                                        android:text="Office Break"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_16sp" />
+
+                                    <TextView
+                                        android:id="@+id/officeStartStatus"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/roboto_bold"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_14sp" />
+
+                                    <Switch
+                                        android:id="@+id/switchOfficeBreak"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/_20dip"
+                                        android:layout_marginBottom="@dimen/_10dp"
+                                        android:layout_toLeftOf="@+id/ivLogout"
+                                        android:background="@drawable/bg_switch_shape"
+                                        android:backgroundTint="@color/v_blue_color"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:thumb="@drawable/switch_bg"
+                                        android:thumbTextPadding="@dimen/_5dip" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="140dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginHorizontal="@dimen/_5dip"
+                                    android:layout_marginTop="@dimen/_2dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_round_shape_white"
+                                    android:backgroundTint="@color/purple_200"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_4dip">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="@dimen/_5dip"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/roboto_bold"
+                                        android:gravity="center"
+                                        android:paddingVertical="@dimen/_6dp"
+                                        android:text="Update You Are Out or In Office"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_16sp" />
+
+                                    <Switch
+                                        android:id="@+id/switchUpdateOffice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="@dimen/_20dip"
+                                        android:layout_marginBottom="@dimen/_10dp"
+                                        android:layout_toLeftOf="@+id/ivLogout"
+                                        android:background="@drawable/bg_switch_shape"
+                                        android:backgroundTint="@color/v_blue_color"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:thumb="@drawable/switch_bg"
+                                        android:thumbTextPadding="@dimen/_5dip" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvOrderTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_10dp"
+                                android:layout_marginTop="@dimen/_5dip"
+                                android:fontFamily="@font/roboto_regular"
+                                android:padding="4dp"
+                                android:text="Orders"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/llTopSection"
+                            android:layout_marginHorizontal="@dimen/_8dip"
+                            android:layout_marginTop="-40dp"
+                            android:elevation="@dimen/_6dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/_6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvOrderTitle"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <LinearLayout
+                                            android:id="@+id/llPending"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_round_shape_white"
+                                            android:backgroundTint="@color/v_blue_color"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:padding="@dimen/_6dp">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/_40dip"
+                                                android:layout_height="@dimen/_40dip"
+                                                android:src="@drawable/ic_pending"
+                                                android:tint="@color/colorPrimary" />
+
+                                            <TextView
+                                                android:id="@+id/tvPending"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:text="fetching..."
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:layout_marginBottom="@dimen/_5dip"
+                                                android:text="Pending"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/llDeliverd"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="@dimen/_5dip"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_round_shape_white"
+                                            android:backgroundTint="@color/v_blue_color"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:padding="6dp">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/_40dip"
+                                                android:layout_height="@dimen/_40dip"
+                                                android:src="@drawable/ic_delivered"
+                                                android:tint="@color/colorPrimary" />
+
+                                            <TextView
+                                                android:id="@+id/tvDeliverd"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:text="fetching..."
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:layout_marginBottom="@dimen/_5dip"
+                                                android:text="Delivered"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/llOrderSectionSecond"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/topSection"
+                                        android:layout_marginHorizontal="5dp"
+                                        android:layout_marginTop="@dimen/_5dip"
+                                        android:orientation="horizontal"
+                                        android:weightSum="3">
+
+                                        <LinearLayout
+                                            android:id="@+id/llApproved"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_round_shape_white"
+                                            android:backgroundTint="@color/v_blue_color"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:padding="@dimen/_6dp">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/_40dip"
+                                                android:layout_height="@dimen/_40dip"
+                                                android:src="@drawable/ic_approved"
+                                                android:tint="@color/colorPrimary" />
+
+                                            <TextView
+                                                android:id="@+id/tvApproved"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:text="fetching..."
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:layout_marginBottom="@dimen/_5dip"
+                                                android:text="Approved"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/llRejected"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="@dimen/_5dip"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_round_shape_white"
+                                            android:backgroundTint="@color/v_blue_color"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:padding="6dp">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/_40dip"
+                                                android:layout_height="@dimen/_40dip"
+                                                android:src="@drawable/ic_rejected"
+                                                android:tint="@color/colorPrimary" />
+
+                                            <TextView
+                                                android:id="@+id/tvRejected"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:text="fetching..."
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:layout_marginBottom="@dimen/_5dip"
+                                                android:text="Rejected"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/llDispatched"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="@dimen/_5dip"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_round_shape_white"
+                                            android:backgroundTint="@color/v_blue_color"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:padding="6dp">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/_40dip"
+                                                android:layout_height="@dimen/_40dip"
+                                                android:src="@drawable/ic_dispatched"
+                                                android:tint="@color/colorPrimary" />
+
+                                            <TextView
+                                                android:id="@+id/tvDispatched"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:text="fetching..."
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:layout_marginBottom="@dimen/_5dip"
+                                                android:text="Dispatched"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp" />
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:background="@drawable/btn_round_shape_white"
+                                    android:backgroundTint="@color/v_blue_color"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_6dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="@dimen/_10dp"
+                                        android:layout_marginTop="@dimen/_5dip"
+                                        android:fontFamily="@font/roboto_regular"
+                                        android:padding="4dp"
+                                        android:text="Expenses"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:id="@+id/llThisMonthExpens"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_round_shape_white"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:paddingHorizontal="4dp"
+                                            android:paddingVertical="@dimen/_10dp">
+
+                                            <TextView
+                                                android:id="@+id/tvThisMonthExpenses"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:padding="@dimen/_4dip"
+                                                android:text="fetching..."
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:layout_marginBottom="@dimen/_5dip"
+                                                android:padding="@dimen/_4dip"
+                                                android:text="This Month Expenses"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/llLastMonthExpens"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="@dimen/_5dip"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/btn_round_shape_white"
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:paddingHorizontal="4dp"
+                                            android:paddingVertical="@dimen/_10dp">
+
+                                            <TextView
+                                                android:id="@+id/tvLastMonthExpenses"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:padding="@dimen/_4dip"
+                                                android:text="fetching..."
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/_10dp"
+                                                android:layout_marginBottom="@dimen/_5dip"
+                                                android:padding="@dimen/_4dip"
+                                                android:text="Last Month Expenses"
+                                                android:textColor="@color/black"
+                                                android:textSize="@dimen/_14sp" />
+
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rcDashboard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_4dip"
+                                    android:visibility="gone"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                    app:spanCount="2"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/item_dashboard" />
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardTottalLead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4dip"
+                        android:elevation="@dimen/_6dp"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/_8dip"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/vlight_color"
+                        app:cardCornerRadius="@dimen/_6dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5dip"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_4dip">
+
+                            <TextView
+                                android:id="@+id/tvTitleTotatl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="@dimen/_5dip"
+                                android:fontFamily="@font/roboto_bold"
+                                android:paddingVertical="@dimen/_6dp"
+                                android:text=""
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_16sp" />
+
+
+                            <TextView
+                                android:id="@+id/tvTitleTotatlVal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_10dp"
+                                android:layout_marginBottom="@dimen/_5dip"
+                                android:fontFamily="@font/roboto_bold"
+                                android:paddingVertical="@dimen/_6dp"
+                                android:text=""
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_16sp" />
+
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcTelecaer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layoutAnimation="@anim/layout_animation_fall_down"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/item_dashboard" />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/idBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_300dp"
+                        android:layout_marginHorizontal="@dimen/_20dip"
+                        android:layout_marginVertical="@dimen/_20dip"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5dip"
+                        android:background="@color/vlight_color"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/_6dp"
+                        android:paddingVertical="@dimen/_10dp"
+                        android:text="Complaints Request"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcDashComplaint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/item_dashboard" />
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fb_AddArchitect"
+                style="@style/style_FB_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10dp"
+                android:src="@drawable/ic_baseline_person_add_alt_1_24"
+                android:visibility="gone"
+                app:tint="@android:color/white" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                tools:context=".MainActivity">
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/fab_menu_actions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/purple_200"
+                    android:text="actions"
+                    android:textColor="@color/white"
+                    app:icon="@drawable/ic_baseline_add_24"
+                    app:iconTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_create_R_oder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:backgroundTint="@color/purple_200"
+                    android:contentDescription="Menu Alarm"
+                    android:visibility="gone"
+                    app:fabSize="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/fab_menu_actions"
+                    app:layout_constraintEnd_toEndOf="@+id/fab_menu_actions"
+                    app:srcCompat="@drawable/ic_alarm"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tv_create_R_oder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Create Return Order"
+                    android:textColor="@color/purple_200"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/fab_create_R_oder"
+                    app:layout_constraintEnd_toStartOf="@+id/fab_create_R_oder"
+                    app:layout_constraintTop_toTopOf="@+id/fab_create_R_oder" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_create_expnse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:backgroundTint="@color/purple_200"
+                    android:contentDescription="Menu Alarm"
+                    android:visibility="gone"
+                    app:fabSize="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/fab_create_R_oder"
+                    app:layout_constraintEnd_toEndOf="@+id/fab_create_R_oder"
+                    app:srcCompat="@drawable/ic_create_expenses"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tv_create_expnse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Create Expenses"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_round_shape_white"
+                    android:backgroundTint="@color/blue_color"
+                    android:padding="@dimen/_4dip"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/fab_create_expnse"
+                    app:layout_constraintEnd_toStartOf="@+id/fab_create_expnse"
+                    app:layout_constraintTop_toTopOf="@+id/fab_create_expnse" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_create_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:backgroundTint="@color/purple_200"
+                    android:contentDescription="Menu Person"
+                    android:visibility="gone"
+                    app:fabSize="normal"
+                    app:layout_constraintBottom_toTopOf="@+id/fab_create_expnse"
+                    app:layout_constraintEnd_toEndOf="@+id/fab_create_expnse"
+                    app:layout_constraintStart_toStartOf="@+id/fab_create_expnse"
+                    app:srcCompat="@drawable/ic_create_order"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tv_create_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Create Order"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_round_shape_white"
+                    android:backgroundTint="@color/purple_200"
+                    android:padding="@dimen/_4dip"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/fab_create_order"
+                    app:layout_constraintEnd_toStartOf="@+id/fab_create_order"
+                    app:layout_constraintTop_toTopOf="@+id/fab_create_order" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

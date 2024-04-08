@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<!--    <data>
+        <variable
+            name="loginViewModel"
+            type="com.example.salesapp.viewmodelactivity.LoginViewModel" />
+    </data>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activity.LoginActivity">
+
+
+        <ImageView
+            android:layout_width="@dimen/_200dip"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20dip"
+            android:layout_marginVertical="@dimen/_20dip"
+            android:src="@drawable/app_logo"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/topround"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_60dip">
+
+        <EditText
+            android:id="@+id/editMobNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Username"
+            android:background="@drawable/btn_round_shape_white"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="@dimen/_40dip"
+            android:paddingVertical="@dimen/_10dp"
+            android:paddingHorizontal="@dimen/_6dp"
+            android:maxLength="10"
+            android:inputType="number"
+            android:textSize="@dimen/_14sp"
+            android:singleLine="true"/>
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Password"
+            android:background="@drawable/btn_round_shape_white"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:paddingVertical="@dimen/_10dp"
+            android:paddingHorizontal="@dimen/_6dp"
+            android:textSize="@dimen/_14sp"
+            android:singleLine="true"/>
+        <!--     android:text="@={loginViewModel.mobileNo}"-->
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvForgotPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="Forgot Password"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:padding="@dimen/_10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_40dip"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btn_round_shape"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Login"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+        <!-- android:onClick="@{()->loginViewModel.submit()}"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20dip"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_2dip"
+                android:text="Don't have an account?"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Sign Up"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:elevation="@dimen/_5dip"
+        android:background="@color/first_color">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply Filter"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:padding="6dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/cirle_shape"
+            android:backgroundTint="@color/white"
+            android:padding="2dp"
+            android:src="@drawable/quantum_ic_clear_grey600_24"
+            android:tint="@color/black"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llDateTimeSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_5dip"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableRight="@drawable/ic_baseline_calendar_month_24"
+            android:drawablePadding="10dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="From Date" />
+
+        <EditText
+            android:id="@+id/editToDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableRight="@drawable/ic_baseline_calendar_month_24"
+            android:drawablePadding="10dp"
+            android:focusable="false"
+            android:layout_marginEnd="@dimen/_5dip"
+            android:focusableInTouchMode="false"
+            android:hint="To Date" />
+
+        <!--  <com.google.android.material.floatingactionbutton.FloatingActionButton
+              android:id="@+id/fb_Search"
+              style="@style/style_FB_submit"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:layout_marginTop="@dimen/_5dip"
+              android:visibility="gone"
+              android:src="@drawable/ic_search_orange"
+              app:tint="@android:color/white" />-->
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_40dip"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_round_shape"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_20dip"
+        android:padding="15dp"
+        android:text="Search"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>

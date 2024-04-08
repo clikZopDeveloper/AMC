@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- https://www.youtube.com/watch?v=sOc37XDJWr4 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:name=".Utills.SalesApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SalesApp.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.LoginNewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.WebviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CreateExpensesActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.CustomerDetailActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.CustTelecallerActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.CreateOrderActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.UpdateTelecallerLeadActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.NoInternetActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.FirbaseOTPAuthActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.AllExpensesActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.ContactListActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.AllComplaintsActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.CreateReturnOrderActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.ProjectDetailActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.CreateMeetingActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.PasswordChnageActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.AllCustomerTypeActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.SalesApp.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+ <service
+             android:name=".Activity.LocationService"
+             android:exported="false" />
+        -->
+        <activity
+            android:name=".Activity.DashboardActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+
+        <service
+            android:name=".Activity.LocationService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <receiver
+            android:name=".Activity.MySMSBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

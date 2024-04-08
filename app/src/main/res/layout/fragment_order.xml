@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Fragment.OrderFragment">
+
+        <include
+            android:id="@+id/appbarLayout"
+            layout="@layout/toolbar" />
+
+        <RadioGroup
+            android:id="@+id/RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appbarLayout"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@color/blue_color"
+            android:orientation="horizontal"
+            android:padding="@dimen/_4dip"
+            android:weightSum="5">
+
+            <RadioButton
+                android:id="@+id/rbPending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="@dimen/_6dp"
+                android:text="Pending"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sp"
+                app:buttonCompat="@null" />
+
+            <RadioButton
+                android:id="@+id/rbApproved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="@dimen/_6dp"
+                android:text="Approved"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:buttonCompat="@null" />
+
+            <RadioButton
+                android:id="@+id/rbDispatched"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="@dimen/_6dp"
+                android:text="Dispatched"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:buttonCompat="@null" />
+
+            <RadioButton
+                android:id="@+id/rbDelivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="@dimen/_6dp"
+                android:text="Delivered"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:buttonCompat="@null" />
+
+            <RadioButton
+                android:id="@+id/rbRejected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:padding="@dimen/_6dp"
+                android:text="Rejected"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:buttonCompat="@null" />
+
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcTeamContactList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RadioGroup"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_project_list" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_AddMeting"
+            style="@style/style_FB_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10dp"
+            android:visibility="gone"
+            android:backgroundTint="@color/blue_color"
+            android:src="@drawable/ic_baseline_add_24"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+</layout>
